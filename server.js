@@ -16,9 +16,9 @@ const controllers = require('./controllers');
 app = express();
 
 app.use((req, res, next) => {
-  	res.header("Access-Control-Allow-Origin", "*");
-  	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  	next();
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
 });
 
 app.use(express.static('public'));
@@ -34,9 +34,21 @@ app.use(passport.session());
 app.set('view engine', 'ejs');
 app.set("views", __dirname + "/views");
 
-
 const routes = require("./config/routes");
 app.use(routes);
 app.listen(process.env.PORT || 3000,  () => {
   	console.log('Express server is up and running on http://localhost:3000/');
 });
+
+// app.get('/auth/github',passport.authenticate('github'));
+
+app.get('/auth/github/callback',passport.authenticate('github', { failureRedirect: '/' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
+
+app.get("/logout", function(req, res){
+    req.logout();
+    res.redirect("/")
+  })
