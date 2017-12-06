@@ -1,0 +1,37 @@
+{
+  "name": "project-3-severejetlag",
+  "version": "1.0.0",
+  "description": "Project 3 for GA WDI 41",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/severejetlag/project-3-severejetlag.git"
+  },
+  "author": "Nick Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/severejetlag/project-3-severejetlag/issues"
+  },
+  "homepage": "https://github.com/severejetlag/project-3-severejetlag#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-ejs-layouts": "^2.3.1",
+    "express-session": "^1.15.6",
+    "express-sessions": "^1.0.6",
+    "flash": "^1.1.0",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.12.3",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.12.5",
+    "passport": "^0.4.0",
+    "passport-github": "^1.1.0"
+  }
+}
