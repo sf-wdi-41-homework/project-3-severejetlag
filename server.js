@@ -7,6 +7,7 @@ const passport = require('passport');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
+const request = require('request');
 
 // Require controllers and models
 const db = require('./models');
@@ -39,16 +40,3 @@ app.use(routes);
 app.listen(process.env.PORT || 3000,  () => {
   	console.log('Express server is up and running on http://localhost:3000/');
 });
-
-// app.get('/auth/github',passport.authenticate('github'));
-
-app.get('/auth/github/callback',passport.authenticate('github', { failureRedirect: '/' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/');
-  });
-
-app.get("/logout", function(req, res){
-    req.logout();
-    res.redirect("/")
-  })
