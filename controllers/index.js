@@ -1,3 +1,4 @@
 module.exports = {
-  statics: require('./staticsController')
+  statics: require('./staticsController'),
+  users: require('./usersController')
 }
