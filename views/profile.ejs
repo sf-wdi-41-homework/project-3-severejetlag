@@ -1,0 +1,21 @@
+<div class="alert alert-danger"><%= message %></div>
+
+<h1>Profile Page</h1>
+<div>
+  <% if(user != undefined){ %>
+    <h2>Below is the data sent by GitHub</h2>
+    <pre>
+      <%= user.gitHub %>
+    </pre>
+    <a href="/logout">Logout</a>
+  <% } else { %>
+    <a href="/auth/github">Login with GitHub</a>
+  <% } %>
+
+
+  <% repos.forEach(function(repo, i){ %>
+    <div>
+      <a href="/repo/<%=repo.name%>"><%= repo.name %></a>
+    </div>
+  <%})%>
+</div>

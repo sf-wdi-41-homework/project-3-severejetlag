@@ -1,16 +1,10 @@
-
 <div class="alert alert-danger"><%= message %></div>
 
-
-<section id="welcome">
-	<div class="container">
-		<div>
-			<h1>Work Better, Not Harder</h1>
-			<p>Share how you work to help others better understand what can make them more productive. </p>
-		</div>
-	</div>
-</section>
-
-<section id="top-users" class="container">
-	<h2>Top Workspaces!</h2>
-</section>
+<h1>GITHUB LOGIN USING PASSPORT</h1>
+<div>
+  <% if(user != undefined){ %>
+    <a href="/logout">Logout</a>
+  <% } else { %>
+    <a href="/auth/github">Login with GitHub</a>
+  <% } %>
+</div>
