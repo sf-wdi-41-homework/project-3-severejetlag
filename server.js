@@ -25,7 +25,6 @@ app.use((req, res, next) => {
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(ejsLayouts);
-app.use(session({ secret: 'WDI-GENERAL-ASSEMBLY-EXPRESS' }));
 app.use(flash());
 app.use(morgan('dev'));
 app.use(cookieParser());
