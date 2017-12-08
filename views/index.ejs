@@ -1,11 +1,11 @@
 <div class="alert alert-danger"><%= message %></div>
-
-<h1>GITHUB LOGIN USING PASSPORT</h1>
-<div>
-  <% if(user != undefined){ %>
-    <a href="/logout">Logout</a>
-  <% } else { %>
-    <a href="/auth/github">Login with GitHub</a>
-  <% } %>
-  <i class="fab fa-github"></i>
-</div>
+<section id="home-page">
+  <div id="signup">
+    <h1>Track Your GitHub</h1>
+    <% if(user != undefined){ %>
+      <a class="btn btn-large" href="/logout">Logout</a>
+      <% } else { %>
+      <a class="btn btn-large" href="/auth/github">Login with GitHub <i class="fab fa-github"></i></a>
+    <% } %>
+  </div>
+</section>

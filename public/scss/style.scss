@@ -1,1 +1,19 @@
-@import 'fontawesome-scss/fontawesome'
+@import 'fontawesome-scss/fontawesome';
+@import 'materialize-scss/materialize';
+
+#main-nav{
+  ul{
+    li{
+      a{font-size: 2em;
+        i{
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+// Main Home Page
+#home-page{
+  position:relative;
+}
