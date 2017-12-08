@@ -13,8 +13,7 @@ let profile = (req,res) => {
     }, function(err, response, body) {
     // If successful then render profile page
     if (!err && response.statusCode == 200) {
-      console.log(JSON.parse(body))
-      var repos = JSON.parse(body);
+      let repos = JSON.parse(body);
       res.render(
         'profile.ejs',
         {
@@ -25,10 +24,6 @@ let profile = (req,res) => {
       )
     }
   })
-  // request.get('https://api.github.com/rate_limit', {headers:{'User-Agent': "Github Dashboard App",'Authorization': `token ${req.user.gitHub.accessToken}`}}, function(err, response, body) {
-  //   console.log(JSON.parse(body))
-  //   res.send('ok')
-  // })
 }
 
 let repo = (req,res) => {
@@ -42,7 +37,6 @@ let repo = (req,res) => {
     }, function(err, response, body) {
     // If successful then render profile page
     if (!err && response.statusCode == 200) {
-      console.log(JSON.parse(body))
       let repoInfo = JSON.parse(body);
       res.render(
         'repo.ejs',
