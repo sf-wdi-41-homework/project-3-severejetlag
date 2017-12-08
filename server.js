@@ -15,7 +15,6 @@ app = express();
 // Require controllers, models, and routes
 const db = require('./models');
 const controllers = require('./controllers');
-const routes = require("./config/routes");
 
 app.use((req, res, next) => {
 	res.header("Access-Control-Allow-Origin", "*");
@@ -36,6 +35,7 @@ app.use((req, res, next) => {
 	global.currentUser = req.user;
 	next();
 });
+const routes = require("./config/routes");
 app.use(routes);
 
 app.set('view engine', 'ejs');

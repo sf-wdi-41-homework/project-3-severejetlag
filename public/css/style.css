@@ -9402,7 +9402,14 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   #main-nav ul li a i {
     font-size: 1em; }
 
-#home-page {
-  position: relative; }
+#home-page i {
+  font-size: 2em; }
+#home-page #signup a {
+  height: auto;
+  font-size: 2.5em;
+  line-height: 2;
+  text-transform: capitalize; }
+  #home-page #signup a i {
+    font-size: 1em; }
 
 /*# sourceMappingURL=style.css.map */

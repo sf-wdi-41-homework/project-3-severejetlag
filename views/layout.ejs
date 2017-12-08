@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="/js/materialize.min.js" charset="utf-8"></script>
@@ -13,6 +14,7 @@
       <div class="nav-wrapper container">
         <a href="/" class="brand-logo">GitHub Dashboard</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+
           <% if(currentUser){%>
             <li><a href="/logout">Logout</a></li>
           <% } else { %>

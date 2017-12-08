@@ -21,7 +21,7 @@ module.exports = function(passport){
     // // Use this to see the information returned from Facebook
     process.nextTick(function() {
       db.User.findOne({ 'gitHub.id' : profile.id }, function(err, user) {
-        if (err) return done(err);
+        if (err) return cb(err);
         if (user) {
           return cb(null, user);
         } else {

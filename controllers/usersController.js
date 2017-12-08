@@ -4,6 +4,7 @@ const request = require('request');
 // Loads profile page after login
 let profile = (req,res) => {
   // Get Requst using Users repo list url and access token
+  console.log(req.user)
   request.get({
     url: 'https://api.github.com/user/repos',
     headers:{
