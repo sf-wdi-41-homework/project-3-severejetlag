@@ -9,12 +9,12 @@ const cookieParser = require('cookie-parser');
 const methodOverride = require('method-override');
 const request = require('request');
 
-// Require controllers and models
-const db = require('./models');
-const controllers = require('./controllers');
-
 // Initialise Express App
 app = express();
+
+// Require controllers, models, and routes
+const db = require('./models');
+const controllers = require('./controllers');
 
 app.use((req, res, next) => {
 	res.header("Access-Control-Allow-Origin", "*");
@@ -31,12 +31,16 @@ app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
+app.use((req, res, next) => {
+	global.currentUser = req.user;
+	next();
+});
+const routes = require("./config/routes");
+app.use(routes);
 
 app.set('view engine', 'ejs');
 app.set("views", __dirname + "/views");
 
-const routes = require("./config/routes");
-app.use(routes);
 app.listen(process.env.PORT || 3000,  () => {
   	console.log('Express server is up and running on http://localhost:3000/');
 });
