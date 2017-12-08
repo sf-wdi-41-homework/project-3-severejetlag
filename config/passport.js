@@ -1,5 +1,5 @@
 const db = require('../models');
-const GitHubStrategy = require('passport-github').Strategy;
+const GitHubStrategy = require('passport-github2').Strategy;
 
 module.exports = function(passport){
   passport.serializeUser(function(user, done) {
@@ -8,7 +8,7 @@ module.exports = function(passport){
 
   passport.deserializeUser(function(id, done) {
     db.User.findById(id, function(err, user) {
-      console.log('deserializing user:',user);
+      console.log('deserializing user:',user.gitHub.accessToken);
       done(err, user);
     });
   });
@@ -23,6 +23,10 @@ module.exports = function(passport){
       db.User.findOne({ 'gitHub.id' : profile.id }, function(err, user) {
         if (err) return cb(err);
         if (user) {
+          console.log("Stored Token")
+
+          console.log(user.gitHub.accessToken)
+          console.log(user.gitHub.refreshToken)
           return cb(null, user);
         } else {
 

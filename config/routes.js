@@ -17,7 +17,7 @@ router.route('/repo/:name')
 
 // GitHub OAuth route
 router.route('/auth/github')
-  .get(passport.authenticate('github'))
+  .get(passport.authenticate('github',{ scope: [ 'user:email' ] }))
 
 // Route after GitHub OAuth
 router.route('/auth/github/callback')

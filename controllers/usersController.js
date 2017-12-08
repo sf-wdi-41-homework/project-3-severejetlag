@@ -23,7 +23,15 @@ let profile = (req,res) => {
           repos
         }
       )
+    }else{
+      console.log("\n RESPONSE BODY")
+      console.log(JSON.parse(body))
+
+      console.log("\n RESPONSE STATUS")
+      console.log(response.statusCode)
+      res.send("timeout")
     }
+
   })
 }
 
@@ -47,6 +55,13 @@ let repo = (req,res) => {
           repoInfo
         }
       )
+    }else{
+      console.log("\n RESPONSE BODY")
+      console.log(JSON.parse(body))
+
+      console.log("\n RESPONSE STATUS")
+      console.log(response.statusCode)
+      res.send("timeout")
     }
   })
 }
