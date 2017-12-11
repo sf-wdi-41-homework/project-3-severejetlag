@@ -7,6 +7,15 @@
     </hgroup>
   </section>
   <section id="repo-stats">
+    <h3>Language Stats</h3>
+    <% for (var key in repoLanguages) { %>
+      <% if (repoLanguages.hasOwnProperty(key)) { %>
+        <p><%=key%> : <%=repoLanguages[key]%></p>
+      <%}%>
+    <%}%>
 
+    <h3>Social Stats</h3>
+    <p><%=repoInfo.stargazers_count%></p>
+    <p><%=repoInfo.watchers_count%></p>
   </section>
 </div>
