@@ -1,4 +1,5 @@
 module.exports = {
   statics: require('./staticsController'),
-  users: require('./usersController')
+  profile: require('./profileController'),
+  repos: require('./reposController')
 }

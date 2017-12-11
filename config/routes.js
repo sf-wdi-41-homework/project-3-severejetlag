@@ -10,10 +10,10 @@ router.route('/')
 
 // Route post login
 router.route('/profile')
-  .get(controllers.users.profile)
+  .get(controllers.profile.show)
 
 router.route('/repo/:name')
-  .get(controllers.users.repo)
+  .get(controllers.repos.show)
 
 // GitHub OAuth route
 router.route('/auth/github')
