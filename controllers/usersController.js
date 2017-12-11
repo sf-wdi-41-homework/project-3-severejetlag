@@ -7,10 +7,7 @@ let profile = (req,res) => {
   console.log(req.user)
   request.get({
     url: 'https://api.github.com/user/repos',
-    headers:{
-      'User-Agent': "Github Dashboard App",
-      'Authorization': `token ${req.user.gitHub.accessToken}`
-    }
+    headers:{'User-Agent': "Github Dashboard App",'Authorization': `token ${req.user.gitHub.accessToken}`}
     }, function(err, response, body) {
     // If successful then render profile page
     if (!err && response.statusCode == 200) {
@@ -20,16 +17,10 @@ let profile = (req,res) => {
         {
           message: req.flash('errorMessage'),
           user:req.user,
-          repos
+          repos,
+          languageCount: languageCalculater(repos)
         }
       )
-    }else{
-      console.log("\n RESPONSE BODY")
-      console.log(JSON.parse(body))
-
-      console.log("\n RESPONSE STATUS")
-      console.log(response.statusCode)
-      res.send("timeout")
     }
 
   })
@@ -39,10 +30,7 @@ let repo = (req,res) => {
   repo = req.params.name
   request.get({
     url: `https://api.github.com/repos/${req.user.gitHub.username}/${repo}`,
-    headers:{
-      'User-Agent': "Github Dashboard App",
-      'Authorization': `token ${req.user.gitHub.accessToken}`
-    }
+    headers:{'User-Agent': "Github Dashboard App",'Authorization': `token ${req.user.gitHub.accessToken}`}
     }, function(err, response, body) {
     // If successful then render profile page
     if (!err && response.statusCode == 200) {
@@ -55,15 +43,22 @@ let repo = (req,res) => {
           repoInfo
         }
       )
-    }else{
-      console.log("\n RESPONSE BODY")
-      console.log(JSON.parse(body))
-
-      console.log("\n RESPONSE STATUS")
-      console.log(response.statusCode)
-      res.send("timeout")
     }
   })
+}
+
+let languageCalculater = (repos) => {
+  let languageCount = {}
+  repos.forEach(function(repo,i){
+    console.log(repo.language);
+    if(!Object.keys(languageCount).includes(String(repo.language))){
+      languageCount[String(repo.language)] = 1;
+    }else{
+      languageCount[String(repo.language)]++;
+    }
+  })
+  console.log(languageCount)
+  return languageCount
 }
 
 module.exports = {

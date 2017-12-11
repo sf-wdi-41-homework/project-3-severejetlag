@@ -1,7 +1,7 @@
 <div class="alert alert-danger"><%= message %></div>
 
-<h1>Profile Page</h1>
 <div>
+  <h1>Profile Page</h1>
   <% if(user != undefined){ %>
     <h2>Below is the data sent by GitHub</h2>
     <pre>
@@ -12,6 +12,13 @@
     <a href="/auth/github">Login with GitHub</a>
   <% } %>
 
+  languageCount
+  <% for (var key in languageCount) { %>
+    <% if (languageCount.hasOwnProperty(key)) { %>
+
+      <p><%=key%> : <%=languageCount[key]%></p>
+    <%}%>
+  <%}%>
 
   <% repos.forEach(function(repo, i){ %>
     <div>
