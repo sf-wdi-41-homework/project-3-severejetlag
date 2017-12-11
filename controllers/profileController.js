@@ -4,7 +4,6 @@ const request = require('request');
 // Loads profile page after login
 let show = (req,res) => {
   // Get Requst using Users repo list url and access token
-  console.log(req.user)
   request.get({
     url: 'https://api.github.com/user/repos',
     headers:{'User-Agent': "Github Dashboard App",'Authorization': `token ${req.user.gitHub.accessToken}`}
@@ -22,21 +21,19 @@ let show = (req,res) => {
         }
       )
     }
-
   })
 }
 
+// Count totals of each language for all repos 
 let languageCalculater = (repos) => {
   let languageCount = {}
   repos.forEach(function(repo,i){
-    console.log(repo.language);
     if(!Object.keys(languageCount).includes(String(repo.language))){
       languageCount[String(repo.language)] = 1;
     }else{
       languageCount[String(repo.language)]++;
     }
   })
-  console.log(languageCount)
   return languageCount
 }
 
