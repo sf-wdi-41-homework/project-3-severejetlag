@@ -23,32 +23,25 @@ module.exports = function(passport){
       db.User.findOne({ 'gitHub.id' : profile.id }, function(err, user) {
         if (err) return cb(err);
         if (user) {
-          console.log("Stored Token")
-
-          console.log(user.gitHub.accessToken)
-          console.log(user.gitHub.refreshToken)
           return cb(null, user);
         } else {
-
           let newUser = new db.User();
-          newUser.gitHub.id                 = profile.id;
-          newUser.gitHub.accessToken        = accessToken;
-          newUser.gitHub.username           = profile.username;
-          newUser.gitHub.email              = profile._json.email;
-          newUser.gitHub.name               = profile._json.name;
-          newUser.gitHub.avatarUrl          = profile._json.avatar_url;
-          newUser.gitHub.location           = profile._json.location;
-          newUser.gitHub.apiUrl             = profile._json.url;
-          newUser.gitHub.profileUrl         = profile._json.html_url;
-          newUser.gitHub.followersUrl       = profile._json.followers_url;
-          newUser.gitHub.reposUrl           = profile._json.repos_url;
-          newUser.gitHub.publicRepos        = profile._json.public_repos;
-          newUser.gitHub.publicGists        = profile._json.public_gists;
-          newUser.gitHub.hireable           = profile._json.hireable;
-          newUser.gitHub.followers          = profile._json.followers;
-          newUser.gitHub.following          = profile._json.following;
-          newUser.gitHub.createdAt          = profile._json.created_at;
-          newUser.gitHub.updatedAt          = profile._json.updated_at;
+          newUser.gitHub.id           = profile.id;
+          newUser.gitHub.accessToken  = accessToken;
+          newUser.gitHub.username     = profile.username;
+          newUser.gitHub.email        = profile._json.email;
+          newUser.name                = profile._json.name;
+          newUser.avatarUrl           = profile._json.avatar_url;
+          newUser.location            = profile._json.location;
+          newUser.apiUrl              = profile._json.url;
+          newUser.profileUrl          = profile._json.html_url;
+          newUser.followersUrl        = profile._json.followers_url;
+          newUser.reposUrl            = profile._json.repos_url;
+          newUser.publicRepos         = profile._json.public_repos;
+          newUser.publicGists         = profile._json.public_gists;
+          newUser.hireable            = profile._json.hireable;
+          newUser.createdAt           = profile._json.created_at;
+          newUser.updatedAt           = profile._json.updated_at;
 
           newUser.save(function(err) {
             if (err)
@@ -57,9 +50,7 @@ module.exports = function(passport){
             return cb(null, newUser);
           });
         }
-
       });
     });
   }));
-
 }
