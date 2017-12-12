@@ -24,21 +24,10 @@ router.route('/auth/github')
 
 // Route after GitHub OAuth
 router.route('/auth/github/callback')
-  .get(passport.authenticate('github', { failureRedirect: '/' }),
-  function(req, res) {
-    // Successful authentication, redirect profile.
-    res.redirect('/profile');
-  });
+  .get(passport.authenticate('github', { failureRedirect: '/' }),controllers.auth.loginUpdate);
 
 // Route to de-auth user
-app.get("/logout", function(req, res){
-  req.session.destroy(function (err) {
-    if(err){
-      console.log(err)
-    }else{
-      res.redirect('/'); //
-    }
-  });
-})
+router.route("/logout")
+  .get(controllers.auth.logout)
 
 module.exports = router;

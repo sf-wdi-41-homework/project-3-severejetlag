@@ -20,7 +20,7 @@ $(document).ready(function(){
   function repoLanguageFailure(data){
     console.log(data)
   }
-  
+
   function googleCharts(languages,title){
     google.charts.load("current", {packages:["corechart"]});
     google.charts.setOnLoadCallback(drawChart);
@@ -28,8 +28,6 @@ $(document).ready(function(){
       var data = google.visualization.arrayToDataTable(languages);
       var options = {
         pieHole: 0.4,
-        legend: 'none',
-        pieSliceText: 'label',
         chartArea:{left:0,top:0,width:'100%',height:'100%'}
       };
       var chart = new google.visualization.PieChart(document.getElementById('donutchart'));

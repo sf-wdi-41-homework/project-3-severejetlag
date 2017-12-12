@@ -24,7 +24,7 @@ let show = (req,res) => {
   })
 }
 
-// Count totals of each language for all repos 
+// Count totals of each language for all repos
 let languageCalculater = (repos) => {
   let languageCount = {}
   repos.forEach(function(repo,i){
