@@ -15,6 +15,9 @@ router.route('/profile')
 router.route('/repo/:name')
   .get(controllers.repos.show)
 
+router.route('/api/repo/:name/languages')
+  .get(controllers.repos.languages)
+
 // GitHub OAuth route
 router.route('/auth/github')
   .get(passport.authenticate('github',{ scope: [ 'user:email' ] }))
