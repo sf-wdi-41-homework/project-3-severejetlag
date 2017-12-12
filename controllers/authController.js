@@ -38,6 +38,8 @@ let loginUpdate = (req,res) => {
           if(user.updatedAt !== profile.updated_at){
             user.updatedAt = profile.updated_at
           }
+          user.followerCounts.push({followerCount: profile.followers})
+          user.followingCounts.push({followingCount: profile.following})
           user.save((err, saved) => {
             console.log('Updated ', user.gitHub.username);
             res.redirect('/profile');
