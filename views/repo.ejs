@@ -1,3 +1,38 @@
-<h1><%=repoInfo.nameo%></h1>
-<p><%= repoInfo.description %> </p>
-<a href="<%= repoInfo.html_url %>">View Repo</a>
+<div repo="<%= repoInfo.name %>" id="repo-container" class="container">
+  <section id="repo-header">
+    <hgroup>
+      <h1 id="repo-name"><%=repoInfo.name%></h1>
+      <h4><%= repoInfo.description %> </h4>
+      <a class="btn" href="<%= repoInfo.html_url %>">View Repo</a>
+    </hgroup>
+  </section>
+  <section id="repo-stats">
+    <div class="row">
+      <div class="col s6">
+        <section id="info-stats">
+          <h3>Info</h3>
+          <p>Status: <span><%= repoInfo.private ? 'Private' : "Public" %></span></p>
+          <p class="repo-time">Created: <span><%= repoInfo.created_at%></span></p>
+          <p class="repo-time">Updated: <span><%= repoInfo.updated_at %></span></p>
+          <p>Open Issues: <span<%= repoInfo.open_issues_count %></span></p>
+
+        </section>
+        <section id="social-stats">
+          <h3>Social Stats</h3>
+          <p><span>Forks:</span> <%= repoInfo.forks_count%></p>
+          <p><span>Watchers:</span> <%=repoInfo.watchers_count%></p>
+          <p><span>Stargazers:</span> <%=repoInfo.stargazers_count%></p>
+          <p><span>Subscribers:</span> <%= repoInfo.subscribers_count%></p>
+        </section>
+      </div>
+      <div class="col s6">
+        <section>
+          <h3>Language Stats</h3>
+          <div id="donutchart" style="width:100%; height: 300px;"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+</div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/js/profile.js" charset="utf-8"></script>

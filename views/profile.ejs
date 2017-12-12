@@ -1,21 +1,27 @@
 <div class="alert alert-danger"><%= message %></div>
+<div id="profile-container" class="container">
+  <div>
+    <h1>Profile Page</h1>
+    <% if(user != undefined){ %>
+      <h2>Below is the data sent by GitHub</h2>
+      <pre>
+        <%= user.gitHub %>
+      </pre>
+    <% } else { %>
+      <a href="/auth/github">Login with GitHub</a>
+    <% } %>
 
-<h1>Profile Page</h1>
-<div>
-  <% if(user != undefined){ %>
-    <h2>Below is the data sent by GitHub</h2>
-    <pre>
-      <%= user.gitHub %>
-    </pre>
-    <a href="/logout">Logout</a>
-  <% } else { %>
-    <a href="/auth/github">Login with GitHub</a>
-  <% } %>
+    languageCount
+    <% for (var key in languageCounts) { %>
+      <% if (languageCounts.hasOwnProperty(key)) { %>
+        <p><%=key%> : <%=languageCounts[key]%></p>
+      <%}%>
+    <%}%>
 
-
-  <% repos.forEach(function(repo, i){ %>
-    <div>
-      <a href="/repo/<%=repo.name%>"><%= repo.name %></a>
-    </div>
-  <%})%>
+    <% repos.forEach(function(repo, i){ %>
+      <div>
+        <a href="/repo/<%=repo.name%>"><%= repo.name %></a>
+      </div>
+    <%})%>
+  </div>
 </div>
