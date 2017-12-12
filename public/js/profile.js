@@ -1,12 +1,18 @@
 $(document).ready(function(){
   console.log("Profile JQuery Loaded")
 
+  $('.repo-time span').each(function(){
+    let date = new Date($(this).text()).toLocaleDateString()
+    $(this).text(date);
+  })
+
   $.ajax({
     method: 'GET',
     url:`/api/repo/${$('#repo-container').attr('repo')}/languages`,
     success: repoLanguageSuccess,
     failure: repoLanguageFailure
   })
+
   function repoLanguageSuccess(data){
     let langChart = [['Language','Lines of Code']]
     for(let key in data){

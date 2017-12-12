@@ -11,10 +11,10 @@
       <div class="col s6">
         <section id="info-stats">
           <h3>Info</h3>
-          <p><span>Status:</span> <%= repoInfo.private ? 'Private' : "Public" %></p>
-          <p><span>Created:</span> <%= new Date(repoInfo.created_at).toLocaleString() %></p>
-          <p><span>Updated:</span> <%= new Date(repoInfo.updated_at).toLocaleString() %></p>
-          <p><span>Open Issues:</span> <%= repoInfo.open_issues_count %></p>
+          <p>Status: <span><%= repoInfo.private ? 'Private' : "Public" %></span></p>
+          <p class="repo-time">Created: <span><%= repoInfo.created_at%></span></p>
+          <p class="repo-time">Updated: <span><%= repoInfo.updated_at %></span></p>
+          <p>Open Issues: <span<%= repoInfo.open_issues_count %></span></p>
 
         </section>
         <section id="social-stats">

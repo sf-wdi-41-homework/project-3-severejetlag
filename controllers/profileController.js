@@ -24,7 +24,7 @@ let show = (req,res) => {
               'profile.ejs',
               {
                 message: req.flash('errorMessage'),
-                user:req.user,
+                user,
                 repos,
                 languageCounts
               }
@@ -38,15 +38,15 @@ let show = (req,res) => {
 
 // Count totals of each language for all repos
 let languageCalculater = (repos) => {
-  let languageCount = {}
+  let languageCounts = {}
   repos.forEach(function(repo,i){
-    if(!Object.keys(languageCount).includes(String(repo.language))){
-      languageCount[String(repo.language)] = 1;
+    if(!Object.keys(languageCounts).includes(String(repo.language))){
+      languageCounts[String(repo.language)] = 1;
     }else{
-      languageCount[String(repo.language)]++;
+      languageCounts[String(repo.language)]++;
     }
   })
-  return languageCount
+  return languageCounts
 }
 
 module.exports = {

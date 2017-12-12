@@ -14,30 +14,14 @@ let loginUpdate = (req,res) => {
         if (!err && response.statusCode == 200) {
           let profile = JSON.parse(body);
           console.log(profile)
-          if(user.updatedAt !== profile.updated_at){
-            user.updatedAt = profile.updated_at
-          }
-          if(user.location !== profile.location){
-            user.location = profile.location
-          }
-          if(user.publicRepos !== profile.public_repos){
-            user.publicRepos = profile.public_repos
-          }
-          if(user.publicGists !== profile.public_gists){
-            user.publicGists = profile.public_gists
-          }
-          if(user.hireable !== profile.hireable){
-            user.hireable = profile.hireable
-          }
-          if(user.avatarUrl !== profile.avatar_url){
-            user.avatarUrl = profile.avatar_url
-          }
-          if(user.updatedAt !== profile.updated_at){
-            user.updatedAt = profile.updated_at
-          }
-          if(user.updatedAt !== profile.updated_at){
-            user.updatedAt = profile.updated_at
-          }
+          user.updatedAt = profile.updated_at
+          user.location = profile.location
+          user.publicRepos = profile.public_repos
+          user.publicGists = profile.public_gists
+          user.hireable = profile.hireable
+          user.avatarUrl = profile.avatar_url
+          user.updatedAt = profile.updated_at
+          user.updatedAt = profile.updated_at
           user.followerCounts.push({followerCount: profile.followers})
           user.followingCounts.push({followingCount: profile.following})
           user.save((err, saved) => {
