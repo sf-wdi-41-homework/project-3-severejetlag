@@ -7,6 +7,8 @@ let loginUpdate = (req,res) => {
     if(err) {
       console.log(`Couldn't find user`);
     } else {
+
+      // GitHub API request to check current stats
       request.get({
         url: 'https://api.github.com/user',
         headers:{'User-Agent': "Github Dashboard App",'Authorization': `token ${user.gitHub.accessToken}`}
