@@ -6,7 +6,7 @@ $(document).ready(function(){
     $(this).text(date);
   })
 
-  if($('#repo-container')){
+  if($('#repo-container').length){
     $.ajax({
       method: 'GET',
       url:`/api/repo/${$('#repo-container').attr('repo')}/languages`,
