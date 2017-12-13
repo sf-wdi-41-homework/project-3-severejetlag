@@ -10,8 +10,8 @@
       </div>
       <div class="col s7">
         <div class="" id="profile-info">
-          <p>Name: <span><%= user.name %></span></p>
-          <p>Location: <span><%= user.location %></span></p>
+          <p>Name: <span><%= user.name ? user.name : `N/A`%></span></p>
+          <p>Location: <span><%= user.location ? user.location : `N/A`%></span></p>
           <p>Repos: <span><%= repoCount %></span></p>
           <p>Public Repos: <span><%= user.publicRepos %></span></p>
           <p>Gists: <span><%= user.publicGists %></span></p>
@@ -35,12 +35,14 @@
         </div>
         <button class="btn" id="graph-show-button">Show More</button>
       </section>
-      <section >
+      <section>
         <h4>Social Status</h4>
-        <article >
+        <article class="social-stats-container" id="followers-container">
+          <h3>Follower History</h3>
           <div id="followers-chart" style="width: 100%; height: 500px"></div>
         </article>
-        <article >
+        <article class="social-stats-container" id="following-container">
+          <h3>Following History</h3>
           <div id="following-chart" style="width: 100%; height: 500px"></div>
         </article>
       </section>

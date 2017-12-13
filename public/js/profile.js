@@ -67,13 +67,14 @@ function profileLanguageSuccess(data){
     //
     // })
 
-    $('#graph-show-button').on('click',function(e){
-      e.preventDefault()
-      $('.language-graph').toggleClass('active')
-      $(this).text(function(i, text){
-        return text === "Show More" ? "Show Less" : "Show More"
-      })
+  })
+  $('#graph-show-button').on('click',function(e){
+    e.preventDefault()
+    $('.language-graph').toggleClass('active')
+    $(this).text(function(i, text){
+      return text === "Show More" ? "Show Less" : "Show More"
     })
+    console.log('clicked')
   })
 }
 
@@ -87,6 +88,16 @@ function profileFollowersSuccess(data){
     let time = new Date(log.date).toLocaleTimeString()
     chartData.push([time, log.followerCount])
   })
+  let dataFlip = data.slice(0).reverse()
+  if(dataFlip.length > 1 ){
+    if(dataFlip[0].followerCount > dataFlip[1].followerCount){
+      let percentIncrease = ((dataFlip[0].followerCount - dataFlip[1].followerCount)/dataFlip[1].followerCount)*100
+      $('#followers-container h3').append(` <span class="increase">+${Math.round(percentIncrease*100)/100}%</span>`)
+    }else{
+      let percentDecrease = ((dataFlip[1].followerCount - dataFlip[0].followerCount)/dataFlip[1].followerCount)*100
+      $('#followers-container h3').append(` <span class="decrease">-${Math.round(percentDecrease*100)/100}%</span>`)
+    }
+  }
   google.charts.load('current', {'packages':['corechart']});
   google.charts.setOnLoadCallback(drawChart);
 
@@ -110,6 +121,17 @@ function profileFollowingSuccess(data){
     let time = new Date(log.date).toLocaleTimeString()
     chartData.push([time, log.followingCount])
   })
+  let dataFlip = data.slice(0).reverse()
+  if(dataFlip.length > 1){
+    if(dataFlip.length > 1 && dataFlip[0].followingCount > dataFlip[1].followingCount){
+      let percentIncrease = ((dataFlip[0].followingCount - dataFlip[1].followingCount)/dataFlip[1].followingCount)*100
+      $('#following-container h3').append(` <span class="increase">+${Math.round(percentIncrease*100)/100}%</span>`)
+    }else{
+      let percentDecrease = ((dataFlip[1].followingCount - dataFlip[0].followingCount)/dataFlip[1].followingCount)*100
+      $('#following-container h3').append(` <span class="decrease">-${Math.round(percentDecrease*100)/100}%</span>`)
+    }
+  }
+
   google.charts.load('current', {'packages':['corechart']});
   google.charts.setOnLoadCallback(drawChart);
 

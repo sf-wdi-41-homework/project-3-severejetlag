@@ -2623,85 +2623,85 @@ readers do not read off random characters that represent icons */
 .red, #profile-container .language-graph ul li.Ruby {
   background-color: #F44336 !important; }
 
-.red-text {
+.red-text, #profile-container .social-stats-container h3 span.decrease {
   color: #F44336 !important; }
 
 .red.lighten-5, #profile-container .language-graph ul li.lighten-5.Ruby {
   background-color: #FFEBEE !important; }
 
-.red-text.text-lighten-5 {
+.red-text.text-lighten-5, #profile-container .social-stats-container h3 span.text-lighten-5.decrease {
   color: #FFEBEE !important; }
 
 .red.lighten-4, #profile-container .language-graph ul li.lighten-4.Ruby {
   background-color: #FFCDD2 !important; }
 
-.red-text.text-lighten-4 {
+.red-text.text-lighten-4, #profile-container .social-stats-container h3 span.text-lighten-4.decrease {
   color: #FFCDD2 !important; }
 
 .red.lighten-3, #profile-container .language-graph ul li.lighten-3.Ruby {
   background-color: #EF9A9A !important; }
 
-.red-text.text-lighten-3 {
+.red-text.text-lighten-3, #profile-container .social-stats-container h3 span.text-lighten-3.decrease {
   color: #EF9A9A !important; }
 
 .red.lighten-2, #profile-container .language-graph ul li.red.Swift, #profile-container .language-graph ul li.Swift.Ruby, #profile-container .language-graph ul li.lighten-2.Ruby, #profile-container .language-graph ul li.Ruby.Mixed, #profile-container .language-graph ul li.red.Mixed {
   background-color: #E57373 !important; }
 
-.red-text.text-lighten-2 {
+.red-text.text-lighten-2, #profile-container .social-stats-container h3 span.text-lighten-2.decrease {
   color: #E57373 !important; }
 
 .red.lighten-1, #profile-container .language-graph ul li.lighten-1.Ruby {
   background-color: #EF5350 !important; }
 
-.red-text.text-lighten-1 {
+.red-text.text-lighten-1, #profile-container .social-stats-container h3 span.text-lighten-1.decrease {
   color: #EF5350 !important; }
 
 .red.darken-1, #profile-container .language-graph ul li.Ruby, #profile-container .language-graph ul li.red.CSS {
   background-color: #E53935 !important; }
 
-.red-text.text-darken-1 {
+.red-text.text-darken-1, #profile-container .social-stats-container h3 span.text-darken-1.decrease {
   color: #E53935 !important; }
 
 .red.darken-2, #profile-container .language-graph ul li.red.HTML, #profile-container .language-graph ul li.HTML.Ruby, #profile-container .language-graph ul li.darken-2.Ruby {
   background-color: #D32F2F !important; }
 
-.red-text.text-darken-2 {
+.red-text.text-darken-2, #profile-container .social-stats-container h3 span.text-darken-2.decrease {
   color: #D32F2F !important; }
 
 .red.darken-3, #profile-container .language-graph ul li.darken-3.Ruby {
   background-color: #C62828 !important; }
 
-.red-text.text-darken-3 {
+.red-text.text-darken-3, #profile-container .social-stats-container h3 span.text-darken-3.decrease {
   color: #C62828 !important; }
 
 .red.darken-4, #profile-container .language-graph ul li.darken-4.Ruby {
   background-color: #B71C1C !important; }
 
-.red-text.text-darken-4 {
+.red-text.text-darken-4, #profile-container .social-stats-container h3 span.text-darken-4.decrease {
   color: #B71C1C !important; }
 
 .red.accent-1, #profile-container .language-graph ul li.accent-1.Ruby {
   background-color: #FF8A80 !important; }
 
-.red-text.text-accent-1 {
+.red-text.text-accent-1, #profile-container .social-stats-container h3 span.text-accent-1.decrease {
   color: #FF8A80 !important; }
 
 .red.accent-2, #profile-container .language-graph ul li.accent-2.Ruby {
   background-color: #FF5252 !important; }
 
-.red-text.text-accent-2 {
+.red-text.text-accent-2, #profile-container .social-stats-container h3 span.text-accent-2.decrease {
   color: #FF5252 !important; }
 
 .red.accent-3, #profile-container .language-graph ul li.accent-3.Ruby {
   background-color: #FF1744 !important; }
 
-.red-text.text-accent-3 {
+.red-text.text-accent-3, #profile-container .social-stats-container h3 span.text-accent-3.decrease {
   color: #FF1744 !important; }
 
 .red.accent-4, #profile-container .language-graph ul li.accent-4.Ruby {
   background-color: #D50000 !important; }
 
-.red-text.text-accent-4 {
+.red-text.text-accent-4, #profile-container .social-stats-container h3 span.text-accent-4.decrease {
   color: #D50000 !important; }
 
 .pink, #profile-container .language-graph ul li.Swift {
@@ -3379,85 +3379,85 @@ readers do not read off random characters that represent icons */
 .green, #profile-container .language-graph ul li.CSS {
   background-color: #4CAF50 !important; }
 
-.green-text {
+.green-text, #profile-container .social-stats-container h3 span.increase {
   color: #4CAF50 !important; }
 
 .green.lighten-5, #profile-container .language-graph ul li.lighten-5.CSS {
   background-color: #E8F5E9 !important; }
 
-.green-text.text-lighten-5 {
+.green-text.text-lighten-5, #profile-container .social-stats-container h3 span.text-lighten-5.increase {
   color: #E8F5E9 !important; }
 
 .green.lighten-4, #profile-container .language-graph ul li.lighten-4.CSS {
   background-color: #C8E6C9 !important; }
 
-.green-text.text-lighten-4 {
+.green-text.text-lighten-4, #profile-container .social-stats-container h3 span.text-lighten-4.increase {
   color: #C8E6C9 !important; }
 
 .green.lighten-3, #profile-container .language-graph ul li.lighten-3.CSS {
   background-color: #A5D6A7 !important; }
 
-.green-text.text-lighten-3 {
+.green-text.text-lighten-3, #profile-container .social-stats-container h3 span.text-lighten-3.increase {
   color: #A5D6A7 !important; }
 
 .green.lighten-2, #profile-container .language-graph ul li.green.Swift, #profile-container .language-graph ul li.Swift.CSS, #profile-container .language-graph ul li.lighten-2.CSS, #profile-container .language-graph ul li.CSS.Mixed, #profile-container .language-graph ul li.green.Mixed {
   background-color: #81C784 !important; }
 
-.green-text.text-lighten-2 {
+.green-text.text-lighten-2, #profile-container .social-stats-container h3 span.text-lighten-2.increase {
   color: #81C784 !important; }
 
 .green.lighten-1, #profile-container .language-graph ul li.lighten-1.CSS {
   background-color: #66BB6A !important; }
 
-.green-text.text-lighten-1 {
+.green-text.text-lighten-1, #profile-container .social-stats-container h3 span.text-lighten-1.increase {
   color: #66BB6A !important; }
 
 .green.darken-1, #profile-container .language-graph ul li.green.Ruby, #profile-container .language-graph ul li.CSS {
   background-color: #43A047 !important; }
 
-.green-text.text-darken-1 {
+.green-text.text-darken-1, #profile-container .social-stats-container h3 span.text-darken-1.increase {
   color: #43A047 !important; }
 
 .green.darken-2, #profile-container .language-graph ul li.green.HTML, #profile-container .language-graph ul li.HTML.CSS, #profile-container .language-graph ul li.darken-2.CSS {
   background-color: #388E3C !important; }
 
-.green-text.text-darken-2 {
+.green-text.text-darken-2, #profile-container .social-stats-container h3 span.text-darken-2.increase {
   color: #388E3C !important; }
 
 .green.darken-3, #profile-container .language-graph ul li.darken-3.CSS {
   background-color: #2E7D32 !important; }
 
-.green-text.text-darken-3 {
+.green-text.text-darken-3, #profile-container .social-stats-container h3 span.text-darken-3.increase {
   color: #2E7D32 !important; }
 
 .green.darken-4, #profile-container .language-graph ul li.darken-4.CSS {
   background-color: #1B5E20 !important; }
 
-.green-text.text-darken-4 {
+.green-text.text-darken-4, #profile-container .social-stats-container h3 span.text-darken-4.increase {
   color: #1B5E20 !important; }
 
 .green.accent-1, #profile-container .language-graph ul li.accent-1.CSS {
   background-color: #B9F6CA !important; }
 
-.green-text.text-accent-1 {
+.green-text.text-accent-1, #profile-container .social-stats-container h3 span.text-accent-1.increase {
   color: #B9F6CA !important; }
 
 .green.accent-2, #profile-container .language-graph ul li.accent-2.CSS {
   background-color: #69F0AE !important; }
 
-.green-text.text-accent-2 {
+.green-text.text-accent-2, #profile-container .social-stats-container h3 span.text-accent-2.increase {
   color: #69F0AE !important; }
 
 .green.accent-3, #profile-container .language-graph ul li.accent-3.CSS {
   background-color: #00E676 !important; }
 
-.green-text.text-accent-3 {
+.green-text.text-accent-3, #profile-container .social-stats-container h3 span.text-accent-3.increase {
   color: #00E676 !important; }
 
 .green.accent-4, #profile-container .language-graph ul li.accent-4.CSS {
   background-color: #00C853 !important; }
 
-.green-text.text-accent-4 {
+.green-text.text-accent-4, #profile-container .social-stats-container h3 span.text-accent-4.increase {
   color: #00C853 !important; }
 
 .light-green {
@@ -9434,16 +9434,26 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   -o-transition: 0.3s opacity;
   -webkit-transition: 0.3s opacity;
   transition: 0.3s opacity;
-  overflow: hidden;
-  opacity: 0;
-  height: 0; }
+  position: absolute;
+  top: 0;
+  left: -100000px;
+  opacity: 0; }
   #profile-container .language-graph + .language-graph.active {
-    height: auto;
+    position: static;
+    left: auto;
+    top: auto;
     opacity: 1; }
 #profile-container .language-graph ul li {
   float: left;
   text-align: center; }
   #profile-container .language-graph ul li span {
     display: block; }
+
+#repo-container #info-stats p, #repo-container #social-stats p {
+  margin: 5px 0;
+  font-size: 1.5em;
+  font-weight: 600; }
+  #repo-container #info-stats p span, #repo-container #social-stats p span {
+    font-weight: 400; }
 
 /*# sourceMappingURL=style.css.map */

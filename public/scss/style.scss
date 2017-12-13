@@ -79,11 +79,14 @@
     }
     + .language-graph{
       @include transition(.3s opacity);
-      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: -100000px;
       opacity: 0;
-      height: 0;
       &.active{
-        height: auto;
+        position: static;
+        left: auto;
+        top: auto;
         opacity: 1;
       }
     }
@@ -101,6 +104,31 @@
         &.CSS{@extend .green, .darken-1;}
         &.Mixed{@extend .blue-grey, .lighten-2;}
         &.C{@extend .deep-orange;}
+      }
+    }
+  }
+  .social-stats-container{
+    h3{
+      span{
+        &.increase{
+          @extend .green-text;
+        }
+        &.decrease{
+          @extend .red-text;
+        }
+      }
+    }
+  }
+}
+
+#repo-container{
+  #info-stats, #social-stats{
+    p{
+      margin: 5px 0;
+      font-size: 1.5em;
+      font-weight: 600;
+      span{
+        font-weight: 400;
       }
     }
   }
