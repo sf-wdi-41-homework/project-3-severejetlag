@@ -9427,6 +9427,19 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   line-height: 1;
   display: block;
   font-weight: 600; }
+#profile-container .language-graph h4 {
+  font-size: 1.5em; }
+#profile-container .language-graph + .language-graph {
+  -moz-transition: 0.3s opacity;
+  -o-transition: 0.3s opacity;
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  overflow: hidden;
+  opacity: 0;
+  height: 0; }
+  #profile-container .language-graph + .language-graph.active {
+    height: auto;
+    opacity: 1; }
 #profile-container .language-graph ul li {
   float: left;
   text-align: center; }

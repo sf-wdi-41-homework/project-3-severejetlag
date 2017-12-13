@@ -44,7 +44,29 @@ let languages = (req,res) => {
   })
 }
 
+let followers = (req,res) => {
+  db.User.findById(req.user._id, (err,user) => {
+    if(err){
+      console.log("Couldn't find user")
+    }else{
+      res.json(user.followerCounts)
+    }
+  })
+}
+
+let following = (req,res) => {
+  db.User.findById(req.user._id, (err,user) => {
+    if(err){
+      console.log("Couldn't find user")
+    }else{
+      res.json(user.followingCounts)
+    }
+  })
+}
+
 module.exports = {
   show,
-  languages
+  languages,
+  followers,
+  following
 }

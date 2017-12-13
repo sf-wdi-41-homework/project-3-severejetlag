@@ -21,6 +21,10 @@ router.route('/api/repo/:name/languages')
   .get(controllers.repos.languages)
 router.route('/api/profile/languages')
   .get(controllers.profile.languages)
+router.route('/api/profile/followers')
+  .get(controllers.profile.followers)
+router.route('/api/profile/following')
+  .get(controllers.profile.following)
 
 // GitHub OAuth route
 router.route('/auth/github')

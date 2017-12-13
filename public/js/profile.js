@@ -13,35 +13,20 @@ $(document).ready(function(){
       success: profileLanguageSuccess,
       failure: profileLanguageFailure
     })
-  }
 
-  function profileLanguageSuccess(data){
-    console.log(data)
-    data.forEach(function(log){
-      let dateContainerHMTL = $.parseHTML(`<div class='language-graph'>
-        <h4>${new Date(log.date).toLocaleDateString()}</h4>
-      </div>`)
-      let graphHTML = $.parseHTML('<ul class="row"></ul>')
-      for(let key in log.languageCounts){
-        if(log.languageCounts.hasOwnProperty(key)){
-          let percentage = (log.languageCounts[key]/log.repoTotal)*100
-          let graphItem = $.parseHTML(`<li class="${key} graph-lang" style='width:${percentage}%'>
-              <div class="graph-language-container">
-                <span>${key}</span>
-                <span>${(Math.round(percentage*100))/100}%</span>
-              </div>
-            </li>`)
-          $(graphHTML).append(graphItem)
-        }
-      }
-      $(dateContainerHMTL).append(graphHTML)
-      $('#language-week-breakdown').prepend(dateContainerHMTL);
-      console.log($('.graph-language-container').width())
+    $.ajax({
+      method: 'GET',
+      url:`/api/profile/followers`,
+      success: profileFollowersSuccess,
+      failure: profileFollowersFailure
     })
-  }
 
-  function profileLanguageFailure(data){
-    console.log(data)
+    $.ajax({
+      method: 'GET',
+      url:`/api/profile/following`,
+      success: profileFollowingSuccess,
+      failure: profilefollowingFailure
+    })
   }
 
   if($('#repo-container').length){
@@ -53,35 +38,125 @@ $(document).ready(function(){
     })
   }
 
-  function repoLanguageSuccess(data){
-    let langChart = [['Language','Lines of Code']]
-    for(let key in data){
-      if(data.hasOwnProperty(key)){
-        if(key === "null"){
-          langChart.push(['Unclassified', data[key]])
-        }else{
-          langChart.push([key, data[key]])
-        }
+})// End document ready
+function profileLanguageSuccess(data){
+  data = data.reverse()
+  data.forEach(function(log){
+    let dateContainerHMTL = $.parseHTML(`<div class='language-graph'>
+    <h4>${new Date(log.date).toLocaleDateString()}</h4>
+    </div>`)
+    let graphHTML = $.parseHTML('<ul class="row"></ul>')
+    for(let key in log.languageCounts){
+      if(log.languageCounts.hasOwnProperty(key)){
+        let percentage = (log.languageCounts[key]/log.repoTotal)*100
+        let graphItem = $.parseHTML(`<li class="${key} graph-lang" style='width:${percentage}%'>
+        <div class="graph-language-container">
+        <span>${key}</span>
+        <span>${(Math.round(percentage*100))/100}%</span>
+        </div>
+        </li>`)
+        $(graphHTML).append(graphItem)
       }
     }
-    googleCharts(langChart, 'Language Summary');
-  }
+    $(dateContainerHMTL).append(graphHTML)
+    $('#language-week-breakdown').append(dateContainerHMTL);
+    // $('.graph-language-container').each(function(){
+    //   console.log($(this).width())
+    //   console.log($(this).find('span'))
+    //   console.log($(this).find('span')[0].scrollWidth)
+    //
+    // })
 
-  function repoLanguageFailure(data){
-    console.log(data)
-  }
+    $('#graph-show-button').on('click',function(e){
+      e.preventDefault()
+      $('.language-graph').toggleClass('active')
+      $(this).text(function(i, text){
+        return text === "Show More" ? "Show Less" : "Show More"
+      })
+    })
+  })
+}
 
-  function googleCharts(languages,title){
-    google.charts.load("current", {packages:["corechart"]});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable(languages);
-      var options = {
-        pieHole: 0.4,
-        chartArea:{left:0,top:0,width:'100%',height:'100%'}
-      };
-      var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-      chart.draw(data, options);
+function profileLanguageFailure(data){
+  console.log(data)
+}
+
+function profileFollowersSuccess(data){
+  let chartData = [['Time','Followers']]
+  data.forEach(function(log){
+    let time = new Date(log.date).toLocaleTimeString()
+    chartData.push([time, log.followerCount])
+  })
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable(chartData);
+    var options = {
+      curveType: 'function',
+      legend: { position: 'bottom' },
+      chartArea:{width:'80%',height:'80%'}
+    };
+    var chart = new google.visualization.LineChart(document.getElementById('followers-chart'));
+    chart.draw(data, options);
+  }
+}
+function profileFollowersFailure(data){
+  console.log(data)
+}
+function profileFollowingSuccess(data){
+  let chartData = [['Time','Following']]
+  data.forEach(function(log){
+    let time = new Date(log.date).toLocaleTimeString()
+    chartData.push([time, log.followingCount])
+  })
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable(chartData);
+    var options = {
+      curveType: 'function',
+      legend: { position: 'bottom' },
+      chartArea:{width:'80%',height:'80%'}
+    };
+    var chart = new google.visualization.LineChart(document.getElementById('following-chart'));
+    chart.draw(data, options);
+  }
+}
+function profilefollowingFailure(data){
+  console.log(data)
+}
+
+
+function repoLanguageSuccess(data){
+  let langChart = [['Language','Lines of Code']]
+  for(let key in data){
+    if(data.hasOwnProperty(key)){
+      if(key === "null"){
+        langChart.push(['Unclassified', data[key]])
+      }else{
+        langChart.push([key, data[key]])
+      }
     }
   }
-})// End document ready
+  googleCharts(langChart, 'Language Summary');
+}
+
+function repoLanguageFailure(data){
+  console.log(data)
+}
+
+function googleCharts(languages,title){
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable(languages);
+    var options = {
+      pieHole: 0.4,
+      chartArea:{left:0,top:0,width:'95%',height:'100%'}
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    chart.draw(data, options);
+  }
+}

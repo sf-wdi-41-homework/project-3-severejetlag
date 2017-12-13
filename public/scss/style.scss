@@ -1,6 +1,12 @@
 @import 'fontawesome-scss/fontawesome';
 @import 'materialize-scss/materialize';
 
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
 
 #main-nav{
   ul{
@@ -68,6 +74,19 @@
 
   }
   .language-graph{
+    h4{
+      font-size: 1.5em;
+    }
+    + .language-graph{
+      @include transition(.3s opacity);
+      overflow: hidden;
+      opacity: 0;
+      height: 0;
+      &.active{
+        height: auto;
+        opacity: 1;
+      }
+    }
     ul{
       li{
         float: left;
