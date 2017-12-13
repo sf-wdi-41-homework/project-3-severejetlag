@@ -44,12 +44,9 @@
 
     <section id="language-stats" class="col s12">
       <h3>Language Stats</h3>
-      <%= user.languageBreakdowns[user.languageBreakdowns.length-1]%>
-      <% for (var key in languageCounts) { %>
-        <% if (languageCounts.hasOwnProperty(key)) { %>
-          <p><%= key %> : <span class="lang-value"><%=languageCounts[key] %></span></p>
-        <%}%>
-      <%}%>
+      <div class="" id="language-week-breakdown">
+
+      </div>
     </section>
 
     <section id="social-stats" class="col s12">

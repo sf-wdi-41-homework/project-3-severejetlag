@@ -64,4 +64,24 @@
       }
     }
   }
+  #language-week-breakdown{
+
+  }
+  .language-graph{
+    ul{
+      li{
+        float: left;
+        text-align: center;
+        span{
+          display: block;
+        }
+        &.HTML{@extend .amber, .darken-2;}
+        &.Swift{@extend .pink, .lighten-2;}
+        &.JavaScript{@extend .blue;}
+        &.Ruby{@extend .red, .darken-1;}
+        &.CSS{@extend .green, .darken-1;}
+        &.Mixed{@extend .blue-grey, .lighten-2;}
+      }
+    }
+  }
 }

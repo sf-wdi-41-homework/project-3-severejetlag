@@ -15,8 +15,6 @@ let show = (req,res) => {
         // If successful then render profile page
         if (!err && response.statusCode == 200) {
           let repos = JSON.parse(body);
-          let languageCounts = languageCalculater(repos);
-          user.languageBreakdowns.push({languageCounts})
           user.save((err,saved) => {
             console.log('Updated ', user.gitHub.username);
             res.render(
@@ -25,7 +23,7 @@ let show = (req,res) => {
                 message: req.flash('errorMessage'),
                 user,
                 repos,
-                languageCounts,
+                languageCounts: user.languageBreakdowns[user.languageBreakdowns.length -1].languageCounts,
                 repoCount: repos.length
               }
             )
@@ -36,23 +34,17 @@ let show = (req,res) => {
   })
 }
 
-// Count totals of each language for all repos
-let languageCalculater = (repos) => {
-  let languageCounts = {}
-  repos.forEach(function(repo,i){
-    let key = String(repo.language)
-    if(key === "null"){
-      key = "Mixed"
-    }
-    if(!Object.keys(languageCounts).includes(key)){
-      languageCounts[key] = 1;
+let languages = (req,res) => {
+  db.User.findById(req.user._id, (err, user) => {
+    if(err){
+      console.log("Couldn't find user")
     }else{
-      languageCounts[key]++;
+      res.json(user.languageBreakdowns)
     }
   })
-  return languageCounts
 }
 
 module.exports = {
-  show
+  show,
+  languages
 }

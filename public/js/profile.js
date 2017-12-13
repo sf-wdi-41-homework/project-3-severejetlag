@@ -6,6 +6,44 @@ $(document).ready(function(){
     $(this).text(date);
   })
 
+  if($('#profile-container').length){
+    $.ajax({
+      method: 'GET',
+      url:`/api/profile/languages`,
+      success: profileLanguageSuccess,
+      failure: profileLanguageFailure
+    })
+  }
+
+  function profileLanguageSuccess(data){
+    console.log(data)
+    data.forEach(function(log){
+      let dateContainerHMTL = $.parseHTML(`<div class='language-graph'>
+        <h4>${new Date(log.date).toLocaleDateString()}</h4>
+      </div>`)
+      let graphHTML = $.parseHTML('<ul class="row"></ul>')
+      for(let key in log.languageCounts){
+        if(log.languageCounts.hasOwnProperty(key)){
+          let percentage = (log.languageCounts[key]/log.repoTotal)*100
+          let graphItem = $.parseHTML(`<li class="${key} graph-lang" style='width:${percentage}%'>
+              <div class="graph-language-container">
+                <span>${key}</span>
+                <span>${(Math.round(percentage*100))/100}%</span>
+              </div>
+            </li>`)
+          $(graphHTML).append(graphItem)
+        }
+      }
+      $(dateContainerHMTL).append(graphHTML)
+      $('#language-week-breakdown').prepend(dateContainerHMTL);
+      console.log($('.graph-language-container').width())
+    })
+  }
+
+  function profileLanguageFailure(data){
+    console.log(data)
+  }
+
   if($('#repo-container').length){
     $.ajax({
       method: 'GET',

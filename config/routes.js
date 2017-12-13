@@ -12,11 +12,15 @@ router.route('/')
 router.route('/profile')
   .get(controllers.profile.show)
 
+// Handle repo info page
 router.route('/repo/:name')
   .get(controllers.repos.show)
 
+// Send JSON data back to front end for google charts
 router.route('/api/repo/:name/languages')
   .get(controllers.repos.languages)
+router.route('/api/profile/languages')
+  .get(controllers.profile.languages)
 
 // GitHub OAuth route
 router.route('/auth/github')
