@@ -1,3 +1,4 @@
+<div id="flash-message" class="alert alert-danger"><%= message %></div>
 <div repo="<%= repoInfo.name %>" id="repo-container" class="container">
   <section id="repo-header">
     <hgroup>
@@ -14,7 +15,7 @@
           <p>Status: <span><%= repoInfo.private ? 'Private' : "Public" %></span></p>
           <p class="repo-time">Created: <span><%= repoInfo.created_at%></span></p>
           <p class="repo-time">Updated: <span><%= repoInfo.updated_at %></span></p>
-          <p>Open Issues: <span<%= repoInfo.open_issues_count %></span></p>
+          <p>Open Issues: <span><%= repoInfo.open_issues_count %></span></p>
 
         </section>
         <section id="social-stats">

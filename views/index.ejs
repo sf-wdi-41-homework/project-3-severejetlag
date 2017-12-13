@@ -1,17 +1,17 @@
-<div class="alert alert-danger"><%= message %></div>
+<div id="flash-message" class="alert alert-danger"><%= message %></div>
 <div id="home-page">
   <section class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
       <h1 class="header center">Track Your GitHub</h1>
       <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        <h5 class="header col s12 light">A modern, sleek dashboard designed to help track your GitHub statistics without trying to figure out the GitHub interface</h5>
       </div>
       <div class="row center" id="signup">
         <% if(user != undefined){ %>
           <a class="btn-large waves-effect waves-light" href="/logout">Logout</a>
         <% } else { %>
-          <a class="btn-large waves-effect waves-light" href="/auth/github">Login with GitHub <i class="fab fa-github"></i></a>
+          <a class="btn-large waves-effect waves-light" href="/auth/github">Sign Up With GitHub <i class="fab fa-github"></i></a>
         <% } %>
 
       </div>
@@ -19,16 +19,16 @@
     </div>
   </section>
   <div class="container">
-    <div class="section">
-
+    <div class="section" id="about">
+      <h1 class="center">About</h1>
       <!--   Icon Section   -->
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
+            <h5 class="center">Speeds Up Analysis</h5>
 
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+            <p class="light">Because of GitHubs clunky interface it can be pretty hard to find exactly what you want to know about your profile or repositories. GitHub Dashboard aims to concentrate that information in a helpful, easy to use place.</p>
           </div>
         </div>
 
@@ -37,7 +37,7 @@
             <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
             <h5 class="center">User Experience Focused</h5>
 
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+            <p class="light">By utilizing elements and principles of Material Design, I hope to create a dashboard that incorporates components and animations that provide more feedback to users.</p>
           </div>
         </div>
 
@@ -46,7 +46,7 @@
             <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
             <h5 class="center">Easy to work with</h5>
 
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            <p class="light">Since I am using GitHub OAuth to authenticate you as you, all it takes is a few clicks to get yourself set up and start viewing information about your profile. Over time the dashboard will track more and more of your public github information to help you understand your code and your community.</p>
           </div>
         </div>
       </div>
@@ -55,38 +55,54 @@
     <br><br>
   </div>
 
+  <section id="features">
+    <div class="container">
+      <h1 class="center">Features</h1>
+      <div class="row center">
+        <div class="col s12 m6">
+          <h4>Implemented</h4>
+          <ul>
+            <li>OAuth Login</li>
+            <li>Profile view</li>
+            <li>Social Tracking</li>
+            <li>All Repo Language Breakdown</li>
+            <li>Repo View</li>
+            <li>Specific Repo Languages</li>
+          </ul>
+        </div>
+        <div class="col s12 m6">
+          <h4>Wants</h4>
+          <ul>
+            <li>Scheduled profile updates</li>
+            <li>More information in Repo View</li>
+            <li>Contributor information</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="page-footer">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
+          <p class="grey-text text-lighten-4">I hope to help those who are avid users of GitHub learn more about their coding habits and learn more about the data that is available to them through the GitHub API.</p>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
+
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" target="_blank" href="https://github.com/severejetlag">gh/severejetlag</a></li>
+            <li><a class="white-text" target="_blank" href="https://www.linkedin.com/in/nickhmlee/">in/nickhmlee</a></li>
+
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Made by <a class="text-lighten-3" href="https://github.com/severejetlag">Nick Lee</a>
       </div>
     </div>
   </footer>

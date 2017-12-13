@@ -1,6 +1,12 @@
 @import 'fontawesome-scss/fontawesome';
 @import 'materialize-scss/materialize';
 
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
 
 #main-nav{
   ul{
@@ -14,10 +20,29 @@
   }
 }
 
+#main-content{
+  position: relative;
+}
+#flash-message{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  line-height: 1.3;
+  @extend .red, .lighten-4;
+  @extend .red-text ;
+}
+
 // Main Home Page
 #home-page{
   i{
     font-size: 2em;
+  }
+  #index-banner{
+    background: url('/images/git_background.jpg') no-repeat;
+    background-size: cover;
+    color: #fff;
+    min-height: 550px;
   }
   #signup{
     h1{}
@@ -28,6 +53,112 @@
       text-transform: capitalize;
       i{
         font-size: 1em;
+      }
+    }
+  }
+  #about{
+    padding: 50px 0 100px;
+  }
+  #features{
+    background: #eee;
+    padding: 50px 0 100px;
+  }
+}
+
+// Profile page
+#profile-container{
+  #avatar-container{
+    img{
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+
+    }
+  }
+  #profile-info{
+    p{
+      margin: 5px 0;
+      font-size: 1.5em;
+      font-weight: 600;
+      span{
+        font-weight: 400;
+      }
+    }
+  }
+
+  #repos{
+    .collection-item{
+      span{
+        font-size: 1.3em;
+        line-height: 1 ;
+        display: block;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .stats-container{
+    padding: 20px 0px;
+  }
+  #language-week-breakdown{
+
+  }
+  .language-graph{
+    h4{
+      font-size: 1.5em;
+    }
+    + .language-graph{
+      @include transition(.3s opacity);
+      position: absolute;
+      top: 0;
+      left: -100000px;
+      opacity: 0;
+      &.active{
+        position: static;
+        left: auto;
+        top: auto;
+        opacity: 1;
+      }
+    }
+    ul{
+      li{
+        float: left;
+        text-align: center;
+        span{
+          display: block;
+        }
+        &.HTML{@extend .amber, .darken-2;}
+        &.Swift{@extend .pink, .lighten-2;}
+        &.JavaScript{@extend .blue;}
+        &.Ruby{@extend .red, .darken-1;}
+        &.CSS{@extend .green, .darken-1;}
+        &.Mixed{@extend .blue-grey, .lighten-2;}
+        &.C{@extend .deep-orange;}
+      }
+    }
+  }
+  .social-stats-container{
+    h3{
+      span{
+        &.increase{
+          @extend .green-text;
+        }
+        &.decrease{
+          @extend .red-text;
+        }
+      }
+    }
+  }
+}
+
+#repo-container{
+  #info-stats, #social-stats{
+    p{
+      margin: 5px 0;
+      font-size: 1.5em;
+      font-weight: 600;
+      span{
+        font-weight: 400;
       }
     }
   }

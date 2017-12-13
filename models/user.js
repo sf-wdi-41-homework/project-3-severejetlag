@@ -13,7 +13,8 @@ const FollowerCount = new Schema({
 
 const LanguageBreakdown = new Schema({
   date: { type: Date, default: Date.now },
-  languageCounts: {}
+  languageCounts: {},
+  repoTotal: Number
 })
 
 const UserSchema = new Schema({
