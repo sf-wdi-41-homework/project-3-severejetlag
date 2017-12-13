@@ -15,6 +15,8 @@ Because of GitHubs clunky interface it can be pretty hard to find exactly what y
 * EJS
 * SASS
 
+### User Stories
+Ideally the person that would be using this app is someone who enjoys his place in the open source community or enjoys following others in the open source community. The app will help you figure how popular a public repo might be. Additionally, if you feel that you are weak in a particular language this app can show you that you might need to focus more of your work on that particular language through the break down of your overall profile as well as each individual repo. 
 
 ### Installation
 To run this application locally you will need to be able to run a node server using the node or nodemon CLI command. Additionally you will need to start a Mongo instance on your local machine. Lastly you will need to set two environment variables that store your GitHub Client ID and GitHub Client Secret to allow OAuth to work. These will be provided by Github when you set up an OAuth application.
