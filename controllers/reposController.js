@@ -1,6 +1,7 @@
 const db = require('../models');
 const request = require('request');
 
+// Grab parameter from URL to do API call to GitHub to pull repo information
 let show = (req,res) => {
   repo = `https://api.github.com/repos/${req.user.gitHub.username}/${req.params.name}`
   request.get({
@@ -23,6 +24,7 @@ let show = (req,res) => {
   })
 }
 
+// Custom API call to deliver language breakdown for Repo to server to Ajax call
 let languages = (req,res) => {
   repo = `https://api.github.com/repos/${req.user.gitHub.username}/${req.params.name}/languages`
   request.get({

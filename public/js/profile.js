@@ -1,11 +1,15 @@
 $(document).ready(function(){
   console.log("Profile JQuery Loaded")
+  // Initialize Materialze Tabs
   $('ul.tabs').tabs();
+
+  //C Convert Repo date string to readable date
   $('.repo-time span').each(function(){
     let date = new Date($(this).text()).toLocaleDateString()
     $(this).text(date);
   })
 
+  // Ajax calls to run on profile page to load information
   if($('#profile-container').length){
     $.ajax({
       method: 'GET',
@@ -29,6 +33,7 @@ $(document).ready(function(){
     })
   }
 
+  // Ajax call to only run on repo page
   if($('#repo-container').length){
     $.ajax({
       method: 'GET',
@@ -39,6 +44,8 @@ $(document).ready(function(){
   }
 
 })// End document ready
+
+// Run once profile language breakdown info is loaded and build out graph
 function profileLanguageSuccess(data){
   data = data.reverse()
   data.forEach(function(log){
@@ -60,21 +67,16 @@ function profileLanguageSuccess(data){
     }
     $(dateContainerHMTL).append(graphHTML)
     $('#language-week-breakdown').append(dateContainerHMTL);
-    // $('.graph-language-container').each(function(){
-    //   console.log($(this).width())
-    //   console.log($(this).find('span'))
-    //   console.log($(this).find('span')[0].scrollWidth)
-    //
-    // })
-
   })
+
+  // Button to allow exapnsion view of graphs
   $('#graph-show-button').on('click',function(e){
     e.preventDefault()
     $('.language-graph').toggleClass('active')
     $(this).text(function(i, text){
       return text === "Show More" ? "Show Less" : "Show More"
     })
-    console.log('clicked')
+
   })
 }
 
@@ -82,6 +84,7 @@ function profileLanguageFailure(data){
   console.log(data)
 }
 
+// Once follower data is loaded this will take data and hit google charts API to produce history graph
 function profileFollowersSuccess(data){
   let chartData = [['Time','Followers']]
   data.forEach(function(log){
@@ -112,9 +115,12 @@ function profileFollowersSuccess(data){
     chart.draw(data, options);
   }
 }
+
 function profileFollowersFailure(data){
   console.log(data)
 }
+
+// Once following data is loaded this will take data and hit google charts API to produce history graph
 function profileFollowingSuccess(data){
   let chartData = [['Time','Following']]
   data.forEach(function(log){
@@ -150,7 +156,7 @@ function profilefollowingFailure(data){
   console.log(data)
 }
 
-
+// Sort repo language breakdown and create pie chart on repo page
 function repoLanguageSuccess(data){
   let langChart = [['Language','Lines of Code']]
   for(let key in data){
@@ -162,18 +168,10 @@ function repoLanguageSuccess(data){
       }
     }
   }
-  googleCharts(langChart, 'Language Summary');
-}
-
-function repoLanguageFailure(data){
-  console.log(data)
-}
-
-function googleCharts(languages,title){
   google.charts.load("current", {packages:["corechart"]});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var data = google.visualization.arrayToDataTable(languages);
+    var data = google.visualization.arrayToDataTable(langChart);
     var options = {
       pieHole: 0.4,
       chartArea:{left:0,top:0,width:'95%',height:'100%'}
@@ -181,4 +179,8 @@ function googleCharts(languages,title){
     var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
     chart.draw(data, options);
   }
+}
+
+function repoLanguageFailure(data){
+  console.log(data)
 }

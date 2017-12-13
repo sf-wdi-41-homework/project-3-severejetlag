@@ -34,6 +34,7 @@ let show = (req,res) => {
   })
 }
 
+// API to send user data about languages back to ajax call
 let languages = (req,res) => {
   db.User.findById(req.user._id, (err, user) => {
     if(err){
@@ -44,6 +45,7 @@ let languages = (req,res) => {
   })
 }
 
+// API to send user data about follower history back to ajax call
 let followers = (req,res) => {
   db.User.findById(req.user._id, (err,user) => {
     if(err){
@@ -54,6 +56,7 @@ let followers = (req,res) => {
   })
 }
 
+// API to send user data about following history back to ajax call
 let following = (req,res) => {
   db.User.findById(req.user._id, (err,user) => {
     if(err){
