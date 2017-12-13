@@ -2572,7 +2572,7 @@ readers do not read off random characters that represent icons */
 .materialize-red-text.text-lighten-5 {
   color: #fdeaeb !important; }
 
-.materialize-red.lighten-4 {
+.materialize-red.lighten-4, .materialize-red#flash-message {
   background-color: #f8c1c3 !important; }
 
 .materialize-red-text.text-lighten-4 {
@@ -2620,88 +2620,88 @@ readers do not read off random characters that represent icons */
 .materialize-red-text.text-darken-4 {
   color: #8b1014 !important; }
 
-.red, #profile-container .language-graph ul li.Ruby {
+.red, #flash-message, #profile-container .language-graph ul li.Ruby {
   background-color: #F44336 !important; }
 
-.red-text, #profile-container .social-stats-container h3 span.decrease {
+.red-text, #flash-message, #profile-container .social-stats-container h3 span.decrease {
   color: #F44336 !important; }
 
-.red.lighten-5, #profile-container .language-graph ul li.lighten-5.Ruby {
+.red.lighten-5, .lighten-5#flash-message, #profile-container .language-graph ul li.lighten-5.Ruby {
   background-color: #FFEBEE !important; }
 
-.red-text.text-lighten-5, #profile-container .social-stats-container h3 span.text-lighten-5.decrease {
+.red-text.text-lighten-5, .text-lighten-5#flash-message, #profile-container .social-stats-container h3 span.text-lighten-5.decrease {
   color: #FFEBEE !important; }
 
-.red.lighten-4, #profile-container .language-graph ul li.lighten-4.Ruby {
+.red.lighten-4, #flash-message, #profile-container .language-graph ul li.lighten-4.Ruby, #profile-container .language-graph ul li.Ruby#flash-message {
   background-color: #FFCDD2 !important; }
 
-.red-text.text-lighten-4, #profile-container .social-stats-container h3 span.text-lighten-4.decrease {
+.red-text.text-lighten-4, .text-lighten-4#flash-message, #profile-container .social-stats-container h3 span.text-lighten-4.decrease {
   color: #FFCDD2 !important; }
 
-.red.lighten-3, #profile-container .language-graph ul li.lighten-3.Ruby {
+.red.lighten-3, .lighten-3#flash-message, #profile-container .language-graph ul li.lighten-3.Ruby {
   background-color: #EF9A9A !important; }
 
-.red-text.text-lighten-3, #profile-container .social-stats-container h3 span.text-lighten-3.decrease {
+.red-text.text-lighten-3, .text-lighten-3#flash-message, #profile-container .social-stats-container h3 span.text-lighten-3.decrease {
   color: #EF9A9A !important; }
 
-.red.lighten-2, #profile-container .language-graph ul li.red.Swift, #profile-container .language-graph ul li.Swift.Ruby, #profile-container .language-graph ul li.lighten-2.Ruby, #profile-container .language-graph ul li.Ruby.Mixed, #profile-container .language-graph ul li.red.Mixed {
+.red.lighten-2, .lighten-2#flash-message, #profile-container .language-graph ul li#flash-message.Swift, #profile-container .language-graph ul li#flash-message.Mixed, #profile-container .language-graph ul li.red.Swift, #profile-container .language-graph ul li.Swift.Ruby, #profile-container .language-graph ul li.lighten-2.Ruby, #profile-container .language-graph ul li.Ruby.Mixed, #profile-container .language-graph ul li.red.Mixed {
   background-color: #E57373 !important; }
 
-.red-text.text-lighten-2, #profile-container .social-stats-container h3 span.text-lighten-2.decrease {
+.red-text.text-lighten-2, .text-lighten-2#flash-message, #profile-container .social-stats-container h3 span.text-lighten-2.decrease {
   color: #E57373 !important; }
 
-.red.lighten-1, #profile-container .language-graph ul li.lighten-1.Ruby {
+.red.lighten-1, .lighten-1#flash-message, #profile-container .language-graph ul li.lighten-1.Ruby {
   background-color: #EF5350 !important; }
 
-.red-text.text-lighten-1, #profile-container .social-stats-container h3 span.text-lighten-1.decrease {
+.red-text.text-lighten-1, .text-lighten-1#flash-message, #profile-container .social-stats-container h3 span.text-lighten-1.decrease {
   color: #EF5350 !important; }
 
-.red.darken-1, #profile-container .language-graph ul li.Ruby, #profile-container .language-graph ul li.red.CSS {
+.red.darken-1, .darken-1#flash-message, #profile-container .language-graph ul li#flash-message.CSS, #profile-container .language-graph ul li.Ruby, #profile-container .language-graph ul li.red.CSS {
   background-color: #E53935 !important; }
 
-.red-text.text-darken-1, #profile-container .social-stats-container h3 span.text-darken-1.decrease {
+.red-text.text-darken-1, .text-darken-1#flash-message, #profile-container .social-stats-container h3 span.text-darken-1.decrease {
   color: #E53935 !important; }
 
-.red.darken-2, #profile-container .language-graph ul li.red.HTML, #profile-container .language-graph ul li.HTML.Ruby, #profile-container .language-graph ul li.darken-2.Ruby {
+.red.darken-2, .darken-2#flash-message, #profile-container .language-graph ul li#flash-message.HTML, #profile-container .language-graph ul li.red.HTML, #profile-container .language-graph ul li.HTML.Ruby, #profile-container .language-graph ul li.darken-2.Ruby {
   background-color: #D32F2F !important; }
 
-.red-text.text-darken-2, #profile-container .social-stats-container h3 span.text-darken-2.decrease {
+.red-text.text-darken-2, .text-darken-2#flash-message, #profile-container .social-stats-container h3 span.text-darken-2.decrease {
   color: #D32F2F !important; }
 
-.red.darken-3, #profile-container .language-graph ul li.darken-3.Ruby {
+.red.darken-3, .darken-3#flash-message, #profile-container .language-graph ul li.darken-3.Ruby {
   background-color: #C62828 !important; }
 
-.red-text.text-darken-3, #profile-container .social-stats-container h3 span.text-darken-3.decrease {
+.red-text.text-darken-3, .text-darken-3#flash-message, #profile-container .social-stats-container h3 span.text-darken-3.decrease {
   color: #C62828 !important; }
 
-.red.darken-4, #profile-container .language-graph ul li.darken-4.Ruby {
+.red.darken-4, .darken-4#flash-message, #profile-container .language-graph ul li.darken-4.Ruby {
   background-color: #B71C1C !important; }
 
-.red-text.text-darken-4, #profile-container .social-stats-container h3 span.text-darken-4.decrease {
+.red-text.text-darken-4, .text-darken-4#flash-message, #profile-container .social-stats-container h3 span.text-darken-4.decrease {
   color: #B71C1C !important; }
 
-.red.accent-1, #profile-container .language-graph ul li.accent-1.Ruby {
+.red.accent-1, .accent-1#flash-message, #profile-container .language-graph ul li.accent-1.Ruby {
   background-color: #FF8A80 !important; }
 
-.red-text.text-accent-1, #profile-container .social-stats-container h3 span.text-accent-1.decrease {
+.red-text.text-accent-1, .text-accent-1#flash-message, #profile-container .social-stats-container h3 span.text-accent-1.decrease {
   color: #FF8A80 !important; }
 
-.red.accent-2, #profile-container .language-graph ul li.accent-2.Ruby {
+.red.accent-2, .accent-2#flash-message, #profile-container .language-graph ul li.accent-2.Ruby {
   background-color: #FF5252 !important; }
 
-.red-text.text-accent-2, #profile-container .social-stats-container h3 span.text-accent-2.decrease {
+.red-text.text-accent-2, .text-accent-2#flash-message, #profile-container .social-stats-container h3 span.text-accent-2.decrease {
   color: #FF5252 !important; }
 
-.red.accent-3, #profile-container .language-graph ul li.accent-3.Ruby {
+.red.accent-3, .accent-3#flash-message, #profile-container .language-graph ul li.accent-3.Ruby {
   background-color: #FF1744 !important; }
 
-.red-text.text-accent-3, #profile-container .social-stats-container h3 span.text-accent-3.decrease {
+.red-text.text-accent-3, .text-accent-3#flash-message, #profile-container .social-stats-container h3 span.text-accent-3.decrease {
   color: #FF1744 !important; }
 
-.red.accent-4, #profile-container .language-graph ul li.accent-4.Ruby {
+.red.accent-4, .accent-4#flash-message, #profile-container .language-graph ul li.accent-4.Ruby {
   background-color: #D50000 !important; }
 
-.red-text.text-accent-4, #profile-container .social-stats-container h3 span.text-accent-4.decrease {
+.red-text.text-accent-4, .text-accent-4#flash-message, #profile-container .social-stats-container h3 span.text-accent-4.decrease {
   color: #D50000 !important; }
 
 .pink, #profile-container .language-graph ul li.Swift {
@@ -2716,7 +2716,7 @@ readers do not read off random characters that represent icons */
 .pink-text.text-lighten-5 {
   color: #fce4ec !important; }
 
-.pink.lighten-4, #profile-container .language-graph ul li.lighten-4.Swift {
+.pink.lighten-4, .pink#flash-message, #profile-container .language-graph ul li#flash-message.Swift, #profile-container .language-graph ul li.lighten-4.Swift {
   background-color: #f8bbd0 !important; }
 
 .pink-text.text-lighten-4 {
@@ -2800,7 +2800,7 @@ readers do not read off random characters that represent icons */
 .purple-text.text-lighten-5 {
   color: #f3e5f5 !important; }
 
-.purple.lighten-4 {
+.purple.lighten-4, .purple#flash-message {
   background-color: #e1bee7 !important; }
 
 .purple-text.text-lighten-4 {
@@ -2884,7 +2884,7 @@ readers do not read off random characters that represent icons */
 .deep-purple-text.text-lighten-5 {
   color: #ede7f6 !important; }
 
-.deep-purple.lighten-4 {
+.deep-purple.lighten-4, .deep-purple#flash-message {
   background-color: #d1c4e9 !important; }
 
 .deep-purple-text.text-lighten-4 {
@@ -2968,7 +2968,7 @@ readers do not read off random characters that represent icons */
 .indigo-text.text-lighten-5 {
   color: #e8eaf6 !important; }
 
-.indigo.lighten-4 {
+.indigo.lighten-4, .indigo#flash-message {
   background-color: #c5cae9 !important; }
 
 .indigo-text.text-lighten-4 {
@@ -3052,7 +3052,7 @@ readers do not read off random characters that represent icons */
 .blue-text.text-lighten-5 {
   color: #E3F2FD !important; }
 
-.blue.lighten-4, #profile-container .language-graph ul li.lighten-4.JavaScript {
+.blue.lighten-4, .blue#flash-message, #profile-container .language-graph ul li#flash-message.JavaScript, #profile-container .language-graph ul li.lighten-4.JavaScript {
   background-color: #BBDEFB !important; }
 
 .blue-text.text-lighten-4 {
@@ -3136,7 +3136,7 @@ readers do not read off random characters that represent icons */
 .light-blue-text.text-lighten-5 {
   color: #e1f5fe !important; }
 
-.light-blue.lighten-4 {
+.light-blue.lighten-4, .light-blue#flash-message {
   background-color: #b3e5fc !important; }
 
 .light-blue-text.text-lighten-4 {
@@ -3220,7 +3220,7 @@ readers do not read off random characters that represent icons */
 .cyan-text.text-lighten-5 {
   color: #e0f7fa !important; }
 
-.cyan.lighten-4 {
+.cyan.lighten-4, .cyan#flash-message {
   background-color: #b2ebf2 !important; }
 
 .cyan-text.text-lighten-4 {
@@ -3304,7 +3304,7 @@ readers do not read off random characters that represent icons */
 .teal-text.text-lighten-5 {
   color: #e0f2f1 !important; }
 
-.teal.lighten-4 {
+.teal.lighten-4, .teal#flash-message {
   background-color: #b2dfdb !important; }
 
 .teal-text.text-lighten-4 {
@@ -3388,7 +3388,7 @@ readers do not read off random characters that represent icons */
 .green-text.text-lighten-5, #profile-container .social-stats-container h3 span.text-lighten-5.increase {
   color: #E8F5E9 !important; }
 
-.green.lighten-4, #profile-container .language-graph ul li.lighten-4.CSS {
+.green.lighten-4, .green#flash-message, #profile-container .language-graph ul li#flash-message.CSS, #profile-container .language-graph ul li.lighten-4.CSS {
   background-color: #C8E6C9 !important; }
 
 .green-text.text-lighten-4, #profile-container .social-stats-container h3 span.text-lighten-4.increase {
@@ -3472,7 +3472,7 @@ readers do not read off random characters that represent icons */
 .light-green-text.text-lighten-5 {
   color: #f1f8e9 !important; }
 
-.light-green.lighten-4 {
+.light-green.lighten-4, .light-green#flash-message {
   background-color: #dcedc8 !important; }
 
 .light-green-text.text-lighten-4 {
@@ -3556,7 +3556,7 @@ readers do not read off random characters that represent icons */
 .lime-text.text-lighten-5 {
   color: #f9fbe7 !important; }
 
-.lime.lighten-4 {
+.lime.lighten-4, .lime#flash-message {
   background-color: #f0f4c3 !important; }
 
 .lime-text.text-lighten-4 {
@@ -3640,7 +3640,7 @@ readers do not read off random characters that represent icons */
 .yellow-text.text-lighten-5 {
   color: #fffde7 !important; }
 
-.yellow.lighten-4 {
+.yellow.lighten-4, .yellow#flash-message {
   background-color: #fff9c4 !important; }
 
 .yellow-text.text-lighten-4 {
@@ -3724,7 +3724,7 @@ readers do not read off random characters that represent icons */
 .amber-text.text-lighten-5 {
   color: #fff8e1 !important; }
 
-.amber.lighten-4, #profile-container .language-graph ul li.lighten-4.HTML {
+.amber.lighten-4, .amber#flash-message, #profile-container .language-graph ul li#flash-message.HTML, #profile-container .language-graph ul li.lighten-4.HTML {
   background-color: #ffecb3 !important; }
 
 .amber-text.text-lighten-4 {
@@ -3808,7 +3808,7 @@ readers do not read off random characters that represent icons */
 .orange-text.text-lighten-5 {
   color: #fff3e0 !important; }
 
-.orange.lighten-4 {
+.orange.lighten-4, .orange#flash-message {
   background-color: #ffe0b2 !important; }
 
 .orange-text.text-lighten-4 {
@@ -3892,7 +3892,7 @@ readers do not read off random characters that represent icons */
 .deep-orange-text.text-lighten-5 {
   color: #fbe9e7 !important; }
 
-.deep-orange.lighten-4, #profile-container .language-graph ul li.lighten-4.C {
+.deep-orange.lighten-4, .deep-orange#flash-message, #profile-container .language-graph ul li#flash-message.C, #profile-container .language-graph ul li.lighten-4.C {
   background-color: #ffccbc !important; }
 
 .deep-orange-text.text-lighten-4 {
@@ -3976,7 +3976,7 @@ readers do not read off random characters that represent icons */
 .brown-text.text-lighten-5 {
   color: #efebe9 !important; }
 
-.brown.lighten-4 {
+.brown.lighten-4, .brown#flash-message {
   background-color: #d7ccc8 !important; }
 
 .brown-text.text-lighten-4 {
@@ -4036,7 +4036,7 @@ readers do not read off random characters that represent icons */
 .blue-grey-text.text-lighten-5 {
   color: #eceff1 !important; }
 
-.blue-grey.lighten-4, #profile-container .language-graph ul li.lighten-4.Mixed {
+.blue-grey.lighten-4, .blue-grey#flash-message, #profile-container .language-graph ul li#flash-message.Mixed, #profile-container .language-graph ul li.lighten-4.Mixed {
   background-color: #cfd8dc !important; }
 
 .blue-grey-text.text-lighten-4 {
@@ -4096,7 +4096,7 @@ readers do not read off random characters that represent icons */
 .grey-text.text-lighten-5 {
   color: #fafafa !important; }
 
-.grey.lighten-4 {
+.grey.lighten-4, .grey#flash-message {
   background-color: #f5f5f5 !important; }
 
 .grey-text.text-lighten-4 {
@@ -9402,8 +9402,23 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   #main-nav ul li a i {
     font-size: 1em; }
 
+#main-content {
+  position: relative; }
+
+#flash-message {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 2em;
+  line-height: 1.3; }
+
 #home-page i {
   font-size: 2em; }
+#home-page #index-banner {
+  background: url("/images/git_background.jpg") no-repeat;
+  background-size: cover;
+  color: #fff;
+  min-height: 550px; }
 #home-page #signup a {
   height: auto;
   font-size: 2.5em;
@@ -9411,6 +9426,11 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   text-transform: capitalize; }
   #home-page #signup a i {
     font-size: 1em; }
+#home-page #about {
+  padding: 50px 0 100px; }
+#home-page #features {
+  background: #eee;
+  padding: 50px 0 100px; }
 
 #profile-container #avatar-container img {
   width: 100%;
@@ -9427,6 +9447,8 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   line-height: 1;
   display: block;
   font-weight: 600; }
+#profile-container .stats-container {
+  padding: 20px 0px; }
 #profile-container .language-graph h4 {
   font-size: 1.5em; }
 #profile-container .language-graph + .language-graph {

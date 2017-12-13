@@ -1,4 +1,4 @@
-<div class="alert alert-danger"><%= message %></div>
+<div id="flash-message" class="alert alert-danger"><%= message %></div>
 <div id="profile-container" class="container">
   <section id="profile-header">
     <h1><%= user.gitHub.username %></h1>
@@ -29,13 +29,13 @@
     </div>
     <section id="profile-stats" class="col s12">
       <h3>Profile Stats</h3>
-      <section>
+      <section class="stats-container">
         <h4>Repo Language Breakdown</h4>
         <div class="" id="language-week-breakdown">
         </div>
         <button class="btn" id="graph-show-button">Show More</button>
       </section>
-      <section>
+      <section class="stats-container">
         <h4>Social Status</h4>
         <article class="social-stats-container" id="followers-container">
           <h3>Follower History</h3>
