@@ -3880,85 +3880,85 @@ readers do not read off random characters that represent icons */
 .orange-text.text-accent-4 {
   color: #ff6d00 !important; }
 
-.deep-orange {
+.deep-orange, #profile-container .language-graph ul li.C {
   background-color: #ff5722 !important; }
 
 .deep-orange-text {
   color: #ff5722 !important; }
 
-.deep-orange.lighten-5 {
+.deep-orange.lighten-5, #profile-container .language-graph ul li.lighten-5.C {
   background-color: #fbe9e7 !important; }
 
 .deep-orange-text.text-lighten-5 {
   color: #fbe9e7 !important; }
 
-.deep-orange.lighten-4 {
+.deep-orange.lighten-4, #profile-container .language-graph ul li.lighten-4.C {
   background-color: #ffccbc !important; }
 
 .deep-orange-text.text-lighten-4 {
   color: #ffccbc !important; }
 
-.deep-orange.lighten-3 {
+.deep-orange.lighten-3, #profile-container .language-graph ul li.lighten-3.C {
   background-color: #ffab91 !important; }
 
 .deep-orange-text.text-lighten-3 {
   color: #ffab91 !important; }
 
-.deep-orange.lighten-2, #profile-container .language-graph ul li.deep-orange.Swift, #profile-container .language-graph ul li.deep-orange.Mixed {
+.deep-orange.lighten-2, #profile-container .language-graph ul li.deep-orange.Swift, #profile-container .language-graph ul li.Swift.C, #profile-container .language-graph ul li.deep-orange.Mixed, #profile-container .language-graph ul li.Mixed.C, #profile-container .language-graph ul li.lighten-2.C {
   background-color: #ff8a65 !important; }
 
 .deep-orange-text.text-lighten-2 {
   color: #ff8a65 !important; }
 
-.deep-orange.lighten-1 {
+.deep-orange.lighten-1, #profile-container .language-graph ul li.lighten-1.C {
   background-color: #ff7043 !important; }
 
 .deep-orange-text.text-lighten-1 {
   color: #ff7043 !important; }
 
-.deep-orange.darken-1, #profile-container .language-graph ul li.deep-orange.Ruby, #profile-container .language-graph ul li.deep-orange.CSS {
+.deep-orange.darken-1, #profile-container .language-graph ul li.deep-orange.Ruby, #profile-container .language-graph ul li.Ruby.C, #profile-container .language-graph ul li.deep-orange.CSS, #profile-container .language-graph ul li.CSS.C, #profile-container .language-graph ul li.darken-1.C {
   background-color: #f4511e !important; }
 
 .deep-orange-text.text-darken-1 {
   color: #f4511e !important; }
 
-.deep-orange.darken-2, #profile-container .language-graph ul li.deep-orange.HTML {
+.deep-orange.darken-2, #profile-container .language-graph ul li.deep-orange.HTML, #profile-container .language-graph ul li.HTML.C, #profile-container .language-graph ul li.darken-2.C {
   background-color: #e64a19 !important; }
 
 .deep-orange-text.text-darken-2 {
   color: #e64a19 !important; }
 
-.deep-orange.darken-3 {
+.deep-orange.darken-3, #profile-container .language-graph ul li.darken-3.C {
   background-color: #d84315 !important; }
 
 .deep-orange-text.text-darken-3 {
   color: #d84315 !important; }
 
-.deep-orange.darken-4 {
+.deep-orange.darken-4, #profile-container .language-graph ul li.darken-4.C {
   background-color: #bf360c !important; }
 
 .deep-orange-text.text-darken-4 {
   color: #bf360c !important; }
 
-.deep-orange.accent-1 {
+.deep-orange.accent-1, #profile-container .language-graph ul li.accent-1.C {
   background-color: #ff9e80 !important; }
 
 .deep-orange-text.text-accent-1 {
   color: #ff9e80 !important; }
 
-.deep-orange.accent-2 {
+.deep-orange.accent-2, #profile-container .language-graph ul li.accent-2.C {
   background-color: #ff6e40 !important; }
 
 .deep-orange-text.text-accent-2 {
   color: #ff6e40 !important; }
 
-.deep-orange.accent-3 {
+.deep-orange.accent-3, #profile-container .language-graph ul li.accent-3.C {
   background-color: #ff3d00 !important; }
 
 .deep-orange-text.text-accent-3 {
   color: #ff3d00 !important; }
 
-.deep-orange.accent-4 {
+.deep-orange.accent-4, #profile-container .language-graph ul li.accent-4.C {
   background-color: #dd2c00 !important; }
 
 .deep-orange-text.text-accent-4 {

@@ -81,6 +81,7 @@
         &.Ruby{@extend .red, .darken-1;}
         &.CSS{@extend .green, .darken-1;}
         &.Mixed{@extend .blue-grey, .lighten-2;}
+        &.C{@extend .deep-orange;}
       }
     }
   }
