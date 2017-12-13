@@ -1,7 +1,7 @@
 # project-3-severejetlag
 ## GitHub Dashboard
 
-[GitHub Dashboardk](https://fast-bastion-29101.herokuapp.com/)
+[GitHub Dashboard](https://fast-bastion-29101.herokuapp.com/)
 
 ### What is it?
 Because of GitHubs clunky interface it can be pretty hard to find exactly what you want to know about your profile or repositories. GitHub Dashboard aims to concentrate that information in a helpful, easy to use place. By utilizing elements and principles of Material Design, I hope to create a dashboard that incorporates components and animations that provide more feedback to users.
