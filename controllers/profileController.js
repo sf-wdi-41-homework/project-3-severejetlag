@@ -17,7 +17,6 @@ let show = (req,res) => {
           let repos = JSON.parse(body);
           let languageCounts = languageCalculater(repos);
           user.languageBreakdowns.push({languageCounts})
-          console.log(user)
           user.save((err,saved) => {
             console.log('Updated ', user.gitHub.username);
             res.render(
@@ -26,7 +25,8 @@ let show = (req,res) => {
                 message: req.flash('errorMessage'),
                 user,
                 repos,
-                languageCounts
+                languageCounts,
+                repoCount: repos.length
               }
             )
           })
@@ -40,10 +40,14 @@ let show = (req,res) => {
 let languageCalculater = (repos) => {
   let languageCounts = {}
   repos.forEach(function(repo,i){
-    if(!Object.keys(languageCounts).includes(String(repo.language))){
-      languageCounts[String(repo.language)] = 1;
+    let key = String(repo.language)
+    if(key === "null"){
+      key = "Mixed"
+    }
+    if(!Object.keys(languageCounts).includes(key)){
+      languageCounts[key] = 1;
     }else{
-      languageCounts[String(repo.language)]++;
+      languageCounts[key]++;
     }
   })
   return languageCounts

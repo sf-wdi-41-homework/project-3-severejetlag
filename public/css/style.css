@@ -9412,4 +9412,20 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   #home-page #signup a i {
     font-size: 1em; }
 
+#profile-container #avatar-container img {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ddd; }
+#profile-container #profile-info p {
+  margin: 5px 0;
+  font-size: 1.5em;
+  font-weight: 600; }
+  #profile-container #profile-info p span {
+    font-weight: 400; }
+#profile-container #repos .collection-item span {
+  font-size: 1.3em;
+  line-height: 1;
+  display: block;
+  font-weight: 600; }
+
 /*# sourceMappingURL=style.css.map */

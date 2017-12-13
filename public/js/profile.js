@@ -1,23 +1,29 @@
 $(document).ready(function(){
   console.log("Profile JQuery Loaded")
-
+  $('ul.tabs').tabs();
   $('.repo-time span').each(function(){
     let date = new Date($(this).text()).toLocaleDateString()
     $(this).text(date);
   })
 
-  $.ajax({
-    method: 'GET',
-    url:`/api/repo/${$('#repo-container').attr('repo')}/languages`,
-    success: repoLanguageSuccess,
-    failure: repoLanguageFailure
-  })
+  if($('#repo-container')){
+    $.ajax({
+      method: 'GET',
+      url:`/api/repo/${$('#repo-container').attr('repo')}/languages`,
+      success: repoLanguageSuccess,
+      failure: repoLanguageFailure
+    })
+  }
 
   function repoLanguageSuccess(data){
     let langChart = [['Language','Lines of Code']]
     for(let key in data){
       if(data.hasOwnProperty(key)){
-        langChart.push([key, data[key]])
+        if(key === "null"){
+          langChart.push(['Unclassified', data[key]])
+        }else{
+          langChart.push([key, data[key]])
+        }
       }
     }
     googleCharts(langChart, 'Language Summary');

@@ -32,3 +32,36 @@
     }
   }
 }
+
+// Profile page
+#profile-container{
+  #avatar-container{
+    img{
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+
+    }
+  }
+  #profile-info{
+    p{
+      margin: 5px 0;
+      font-size: 1.5em;
+      font-weight: 600;
+      span{
+        font-weight: 400;
+      }
+    }
+  }
+
+  #repos{
+    .collection-item{
+      span{
+        font-size: 1.3em;
+        line-height: 1 ;
+        display: block;
+        font-weight: 600;
+      }
+    }
+  }
+}
